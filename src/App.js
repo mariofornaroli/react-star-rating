@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import './App.css';
+import './App.scss';
+const possibleRates = [1, 2, 3, 4, 5];
 
 function App() {
   const [selectedRate, setSelectedRate] = useState(null);
@@ -14,7 +15,7 @@ function App() {
 
         <div class="card-body">
           <div class="stars">
-            {[1, 2, 3, 4, 5].map(rate => <i
+            {possibleRates.map(rate => <i
               key={rate}
               class={"fas fa-star " 
               + ((rate <= selectedRate) ? 'in-rate ' : '')
